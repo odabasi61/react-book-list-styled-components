@@ -28,6 +28,7 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
         <MenuLink to="/login">Login</MenuLink>
         <MenuLink to="/login">Logout</MenuLink> */}
 
+        {/* currentuser true ise menü çubuğunda logout yazısı gösterir ama sayfa login olmuştur. false ise menü çubuğunda register ve login görünür (ayrıca onlaru boş fragment ile sarmalladık) */}
         {currentUser ? (
           <MenuLink to="/login" onClick={logout}>
             Logout
