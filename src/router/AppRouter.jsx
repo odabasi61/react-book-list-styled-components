@@ -40,7 +40,7 @@ const AppRouter = () => {
         {/* kullanıcı girişi yapılarak erişilebilen sayfalar. yukarıda ayrı ayrı yönlendirilişleri var. mesela about kısmına gidebilmek için önce privateroutera gidip oradan yönlendiriliniyor. detail kısmı da öyle. ayrı ayrı yazmak yerine aşağıdaki gibi ikisini aynı yere yazdık. ancak birlikte yazabilmemzin nedeni her ikisine de erişim şartının aynı olması. yani user girişi ortak şart. koşullar başka olsaydı birlikte yazamazdık.*/}
         <Route element={<PrivateRouter />}>
           <Route path="/about" element={<About />} />
-          <Route path="/detail" element={<Detail />} />
+          <Route path="/detail/:id" element={<Detail />} />
         </Route>
       </Routes>
       <Footer />
