@@ -1,4 +1,5 @@
 // burası yönlendirme sayfamız.
+// globalstyles burada çağrıldı. böylece içindeki css özellikleri heryere aktarılabilir.
 
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -13,6 +14,8 @@ import Detail from "../pages/detail/Detail";
 import About from "../pages/about/About";
 
 const AppRouter = () => {
+  // current user state burada oluşturuldu. böylece ilgili componentlere burdan yani parent dan gönderilebilir. navbara ve logine burdan gönderdik.
+
   const [currentUser, setCurrentUser] = useState(
     sessionStorage.getItem("user")
   );
@@ -34,6 +37,7 @@ const AppRouter = () => {
           <Route path="" element={<Detail />} />
         </Route> */}
 
+        {/* kullanıcı girişi yapılarak erişilebilen sayfalar. yukarıda ayrı ayrı yönlendirilişleri var. mesela about kısmına gidebilmek için önce privateroutera gidip oradan yönlendiriliniyor. detail kısmı da öyle. ayrı ayrı yazmak yerine aşağıdaki gibi ikisini aynı yere yazdık. ancak birlikte yazabilmemzin nedeni her ikisine de erişim şartının aynı olması. yani user girişi ortak şart. koşullar başka olsaydı birlikte yazamazdık.*/}
         <Route element={<PrivateRouter />}>
           <Route path="/about" element={<About />} />
           <Route path="/detail" element={<Detail />} />
@@ -45,4 +49,3 @@ const AppRouter = () => {
 };
 
 export default AppRouter;
-

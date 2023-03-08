@@ -1,7 +1,8 @@
 // create global styles
-// theme.js dosyasındaki değişkenleri aşağıda çekiyoruz.
+// theme.js dosyasındaki değişkeni aşağıda body de kullandık.
 // bu componenttekiler, websitesinde her yerde uygulanır.
 
+// cearteGlobalStyle styled-componentsten import edilir.
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
@@ -17,4 +18,3 @@ export const GlobalStyles = createGlobalStyle`
         background: ${({ theme }) => theme.colors.mainColor}
     }
 `;
-

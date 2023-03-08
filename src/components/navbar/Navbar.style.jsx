@@ -2,11 +2,13 @@ import styled from "styled-components";
 import Flex from "../../styles/Flex";
 import { NavLink } from "react-router-dom";
 
+// burada nav dış kapsayıcı olduğu için flex style yaptık.
 export const Nav = styled(Flex)`
   background: ${({ theme }) => theme.colors.navbarBgColor};
   padding: 1rem 2rem;
 `;
 
+// logomuz aynı zamanda anasayfaya giden link olacağı için Navlink import ettik. menü linkleri de öyle.
 export const Logo = styled(NavLink)`
   padding: 1rem 0;
   color: ${({ theme }) => theme.colors.logoColor};
@@ -15,6 +17,7 @@ export const Logo = styled(NavLink)`
   font-size: 2rem;
 `;
 
+// menü burada linkleri (menulink) saran kısımdır.
 export const Menu = styled(Flex)`
   font-weight: bold;
   @media (max-width: ${({ theme }) => theme.screens.lg}) {

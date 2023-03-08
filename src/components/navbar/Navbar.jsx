@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { HamburgerIcon, Logo, Menu, MenuLink, Nav } from "./Navbar.style";
 import { menuIcon } from "../../helper/iconData";
+// menuIcon hamburger menü iconudur. burada data dosyamızdan çekildi. harici kütüphaneden değil.
 
 const Navbar = ({ currentUser, setCurrentUser }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,12 +13,14 @@ const Navbar = ({ currentUser, setCurrentUser }) => {
     sessionStorage.clear();
   };
 
+  // nav içinde justify için space between değeri verdik. flex componentinde default olarak center ayarlıydı. değiştirmek için farklı bir değeri props olarak verdik.
   return (
     <Nav justify="space-between" wrap="wrap">
       <Logo to="/">Clarus Library</Logo>
       <HamburgerIcon onClick={() => setShowMenu(!showMenu)}>
         {menuIcon}
       </HamburgerIcon>
+      {/* menü görünür olamsı için hamburger icona click ile showmenu değiştirme özelliği verdik */}
       <Menu showMenu={showMenu}>
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="/about">About</MenuLink>

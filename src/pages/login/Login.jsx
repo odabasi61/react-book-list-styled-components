@@ -15,6 +15,7 @@ const Login = ({ setCurrentUser }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCurrentUser("anthony");
+    // sessionstoragede tutulacak değişkenimizin adı user, değer de anthony. bu değeri biz verdik.
     sessionStorage.setItem("user", "anthony");
     navigate(-1);
   };
