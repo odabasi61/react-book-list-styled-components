@@ -10,6 +10,7 @@ export const Nav = styled(Flex)`
 
 // logomuz aynı zamanda anasayfaya giden link olacağı için Navlink import ettik. menü linkleri de öyle.
 export const Logo = styled(NavLink)`
+  text-transform: uppercase;
   padding: 1rem 0;
   color: ${({ theme }) => theme.colors.logoColor};
   text-decoration: none;
@@ -30,6 +31,7 @@ export const Menu = styled(Flex)`
 `;
 
 export const MenuLink = styled(NavLink)`
+  text-transform: uppercase;
   text-align: center;
   padding: 1rem 2rem;
   cursor: pointer;

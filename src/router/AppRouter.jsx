@@ -13,12 +13,13 @@ import PrivateRouter from "./PrivateRouter";
 import Detail from "../pages/detail/Detail";
 import About from "../pages/about/About";
 
-const AppRouter = () => {
-  // current user state burada oluşturuldu. böylece ilgili componentlere burdan yani parent dan gönderilebilir. navbara ve logine burdan gönderdik.
+const AppRouter = ({ myTheme, setMyTheme }) => {
+  // currentUser state burada oluşturuldu. böylece ilgili componentlere burdan yani parent dan gönderilebilir. navbara ve logine burdan gönderdik.
 
   const [currentUser, setCurrentUser] = useState(
     sessionStorage.getItem("user")
   );
+
   return (
     <BrowserRouter>
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />
@@ -43,7 +44,8 @@ const AppRouter = () => {
           <Route path="/detail/:id" element={<Detail />} />
         </Route>
       </Routes>
-      <Footer />
+      <Footer myTheme={myTheme} setMyTheme={setMyTheme} />
+      {/* statelerimizi footer a yolladık */}
     </BrowserRouter>
   );
 };

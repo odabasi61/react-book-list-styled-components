@@ -56,6 +56,7 @@ export const SearchInput = styled.input`
 `;
 
 export const SelectBox = styled.select`
+  text-transform: uppercase;
   border-radius: 3px;
   margin-top: 2rem;
   padding: 5px;
@@ -74,6 +75,7 @@ export const SelectBox = styled.select`
 `;
 
 export const HeaderButton = styled.button`
+  text-transform: uppercase;
   background-color: #e1f1dd;
   padding: 5px;
   outline: none;

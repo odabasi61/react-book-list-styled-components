@@ -6,6 +6,16 @@ export const DetailContainer = styled(Flex)`
   padding: 1rem;
 `;
 
+export const DetailPart = styled(Flex)`
+  flex-direction: column;
+  margin: 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: ${({ theme }) => theme.colors.detailBgColor};
+  color: ${({ theme }) => theme.colors.detailColor};
+  width: 80%;
+`;
+
 export const DetailTitle = styled.h1`
   margin: 25px;
   text-align: center;

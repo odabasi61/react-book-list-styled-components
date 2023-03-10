@@ -21,14 +21,15 @@ const About = () => {
           MongoDB,SQL, Python, AWS Services.
         </h4>
         <h4>💬 You can ask me anything you want to know</h4>
+
+        <IconContainer>
+          {iconData.map((item) => (
+            <a key={item.icon} href={item.href}>
+              <Icon icon={item.icon} path={item.path} hoverColor={item.color} />
+            </a>
+          ))}
+        </IconContainer>
       </InfoContainer>
-      <IconContainer>
-        {iconData.map((item) => (
-          <a key={item.icon} href={item.href}>
-            <Icon icon={item.icon} path={item.path} hoverColor={item.color} />
-          </a>
-        ))}
-      </IconContainer>
     </AboutContainer>
   );
 };

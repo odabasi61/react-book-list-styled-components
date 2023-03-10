@@ -34,7 +34,7 @@ const Home = () => {
 
       {!myData.length ? (
         <HomeImg>
-          <img src={homeImg} alt="home image" />
+          <img src={homeImg} alt="home" />
         </HomeImg>
       ) : (
         <MainContainer wrap="wrap">
